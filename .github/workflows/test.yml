@@ -29,6 +29,6 @@ jobs:
         path-to-lcov: ./src/FluentEnsure.UnitTests/TestResults/coverage.info 
     - name: Build and deploy package
       run: |
-        cd ./MyLibrary/
+        cd ./src/FluentEnsure/
         dotnet publish -c=Release
         # deploy
