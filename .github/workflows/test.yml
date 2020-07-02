@@ -4,9 +4,11 @@ name Test
 on: [push, pull_request]
 
 jobs:
-	tests:
-		name: Run unit tests
-		runs-on: windows-latest
-		steps:
-			- uses: actions/checkout@v2.1.0
-			- run: dotnet test
+  build:
+    runs-on: windows-latest
+  tests:
+    name: Run unit tests
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - run: dotnet test
